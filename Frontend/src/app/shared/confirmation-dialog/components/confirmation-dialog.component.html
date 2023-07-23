@@ -1,0 +1,24 @@
+<h2 mat-dialog-title>
+  <span>Confirmation</span>
+</h2>
+<mat-dialog-content class="mat-typography">
+   Are you sure want to {{details.message}} ?
+</mat-dialog-content>
+
+<mat-dialog-actions align="start">
+  <button
+  mat-button
+  color="primary"
+  mat-dialog-close
+>
+   No
+</button>
+  <button
+    mat-button
+    color="primary"
+    (click)="handleChangeAction()"
+  >
+     Yes
+  </button>
+
+</mat-dialog-actions>

@@ -1,0 +1,68 @@
+<div class="login">
+  <form [formGroup]="loginForm">
+    <div class="login-form">
+      <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input
+          matInput
+          formControlName="email"
+          required
+        >
+        <mat-error *ngIf="loginForm.controls.email.touched && loginForm.controls.email.invalid">
+          <span *ngIf="loginForm.controls.email.errors.required">This field is mandatory.</span>
+          <span *ngIf="loginForm.controls.email.errors.pattern">This field is invalid.</span>
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Password</mat-label>
+        <input
+          matInput
+          formControlName="password"
+          type="password"
+          required
+          [type]="hide ? 'password' : 'text'"
+        >
+        <button
+          type="button"
+          mat-icon-button
+          matSuffix
+          (click)="hide = !hide"
+          [attr.aria-label]="'Hide password'"
+          [attr.aria-pressed]="hide"
+        >
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+        <mat-error *ngIf="loginForm.controls.password.touched && loginForm.controls.password.invalid">
+          <span *ngIf="loginForm.controls.password.errors.required">This field is mandatory.</span>
+        </mat-error>
+      </mat-form-field>
+    </div>
+  </form>
+  <div>
+    <button
+      mat-button
+      color="primary"
+      (click)="toggle()"
+    >
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+    <button
+      mat-raised-button
+      color="primary"
+      type="submit"
+      style="width:185px;"
+      (click)="handleSubmit()"
+      [disabled]="!(loginForm.dirty)"
+    >
+      Login
+    </button><br>
+    <button
+      mat-button
+      style="margin-left:45px; margin-top:10px;"
+      color="primary"
+      (click)="handleforgotPasswordAction()"
+    >
+      Forgot password?
+    </button>
+  </div>
+</div>

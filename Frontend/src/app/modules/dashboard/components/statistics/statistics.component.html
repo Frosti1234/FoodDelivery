@@ -1,0 +1,18 @@
+<mat-card>
+  <h2 mat-card-title>FoodDelivery statistics</h2>
+  <mat-card-content class="content">
+    <ngx-charts-bar-vertical
+      style="fill: #B6B3B2;"
+      [results]="chartData"
+      [legendTitle]="'Statistics'"
+      [legend]="true"
+      [showXAxisLabel]="true"
+      [showYAxisLabel]="true"
+      [xAxis]="true"
+      [yAxis]="true"
+      [gradient]="true"
+      (select)="onChartSelect($event)"
+    >
+    </ngx-charts-bar-vertical>
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,94 @@
+/* You can add global styles to this file, and also import other style files */
+@import "@angular/material/theming";
+@include mat-core();
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  color: rgb(182,179,178);
+  height: 100%;
+}
+
+body::-webkit-scrollbar {
+  display: none !important;
+}
+
+.mat-drawer-inner-container::-webkit-scrollbar {
+  display: none !important;
+}
+
+mat-card {
+  padding: 20px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+mat-drawer-content{
+  overflow: auto !important;
+  scrollbar-width: none !important; /* Firefox */
+  -ms-overflow-style: none !important; /*Explorer, Edge */
+  &::-webkit-scrollbar {
+    display: none !important; /*Chrome, Safari, Opera */
+
+  }
+}
+
+.table-overflow {
+  overflow-x: auto !important;
+  scrollbar-width: none !important; /* Firefox */
+  -ms-overflow-style: none !important; /*Explorer, Edge */
+  &::-webkit-scrollbar {
+    display: none !important; /*Chrome, Safari, Opera */
+
+  }
+}
+
+table {
+  padding: 20px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+mat-sidenav {
+  width: 240px;
+  padding-top: 0px;
+}
+
+.red-snackbar {
+  background: rgb(152, 32, 32) !important;
+  color: white !important;
+}
+
+.green-snackbar {
+  background: rgb(35, 137, 35) !important;
+  color: white !important;
+}
+
+$themes-map: (
+  indigo-pink: (
+    primary-base: $mat-indigo,
+    accent-base: $mat-pink,
+  ),
+
+  deeppurple-amber: (
+    primary-base: $mat-deep-purple,
+    accent-base: $mat-amber,
+  ),
+
+  purple-green: (
+    primary-base: $mat-purple,
+    accent-base: $mat-green,
+  ),
+
+  orange-grey: (
+    primary-base: $mat-deep-orange,
+    accent-base: $mat-blue-gray,
+  ),
+);
+
+@import "angular-material-dynamic-themes/themes-core";
+@include make-stylesheets($themes-map);

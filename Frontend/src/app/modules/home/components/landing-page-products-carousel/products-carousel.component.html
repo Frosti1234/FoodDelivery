@@ -1,0 +1,41 @@
+<mat-carousel
+  [timings]="'250ms ease-in'"
+  [autoplay]="true"
+  [interval]="3000"
+  [color]="'primary'"
+  [maxWidth]="'100%'"
+  [proportion]="25"
+  [loop]="true"
+  [hideIndicators]="false"
+  [useKeyboard]="true"
+  [useMouseWheel]="false"
+  orientation="ltr"
+>
+  <mat-carousel-slide
+    #matCarouselSlide
+    overlayColor="#333"
+    [hideOverlay]="false"
+    *ngFor="let slide of slides;"
+  >
+    <mat-grid-list cols="4">
+      <mat-grid-tile
+        *ngFor="let card of slide;"
+        [colspan]="card.cols"
+        [rowspan]="card.rows"
+      >
+        <mat-card class="card">
+          <mat-card-content class="dashboard-card-content">
+            <img
+              alt="Image"
+              mat-card-image
+              [src]="card.image"
+              [style.object-fit]="'cover'"
+              [style.width]="card.width"
+              [style.height]="card.height"
+            >
+          </mat-card-content>
+        </mat-card>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </mat-carousel-slide>
+</mat-carousel>

@@ -1,0 +1,12 @@
+.actions{
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  &-filter{
+    margin-left:20px;
+    flex-grow: 10;
+  }
+  &-button{
+    flex-grow: 1;
+  }
+}

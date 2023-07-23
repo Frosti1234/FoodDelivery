@@ -1,0 +1,30 @@
+.layout {
+  background-color: #303030;
+  &-topnav {
+    padding: 0px;
+    margin: 0px;
+    &--usermenu {
+      position: fixed;
+      right: 0;
+      left: 1;
+      top: 1px;
+      bottom: 0;
+      padding-right: 10px;
+    }
+    &--tabs {
+      padding-right: 50px;
+    }
+  }
+  &-wrapper {
+    height: calc(100vh - 48px);
+    overflow: auto !important;
+    scrollbar-width: none !important; /* Firefox */
+    -ms-overflow-style: none !important; /*Explorer, Edge */
+    &--content {
+      padding: 10px;
+    }
+    &::-webkit-scrollbar {
+      display: none !important; /*Chrome, Safari, Opera */
+    }
+  }
+}

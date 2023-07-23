@@ -1,0 +1,24 @@
+.card {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+
+  &-content {
+    text-align:justify;
+    word-break: break-all;
+    overflow: auto;
+    scrollbar-width: none !important; /* Firefox */
+    -ms-overflow-style: none !important; /*Explorer, Edge */
+    &::-webkit-scrollbar {
+      display: none !important; /*Chrome, Safari, Opera */
+    }
+
+    &--text {
+      font-family: "Caveat", cursive;
+      color: white;
+    }
+  }
+}
+

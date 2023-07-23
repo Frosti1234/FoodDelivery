@@ -1,0 +1,12 @@
+.quantity-input {
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  height: calc(100vh - 48px);
+  &-drawer{
+    background-color: transparent;
+  }
+}
+

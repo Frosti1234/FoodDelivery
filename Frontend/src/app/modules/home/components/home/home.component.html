@@ -1,0 +1,31 @@
+<mat-tab-group
+  (selectedTabChange)="handleTabChange($event)"
+  [style.z-index]="'2'"
+  [style.position]="'absolute'"
+  [style.width]="mobileQuery.matches ? '320px' : '100%'"
+>
+  <mat-tab label="Login"></mat-tab>
+  <mat-tab label="Register"></mat-tab>
+</mat-tab-group>
+
+<mat-sidenav-container>
+  <mat-sidenav
+    #sidenav
+    position="start"
+    [mode]="'side'"
+    [disableClose]="mobileQuery.matches"
+    [style.width]="mobileQuery.matches ? '320px' : '100%'"
+  >
+    <home-signup
+      *ngIf="!showLogin"
+      (sidenav)="sidenav.toggle()"
+    ></home-signup>
+    <home-login
+      *ngIf="showLogin"
+      (sidenav)="sidenav.toggle()"
+    ></home-login>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <home-landing-page></home-landing-page>
+  </mat-sidenav-content>
+</mat-sidenav-container>

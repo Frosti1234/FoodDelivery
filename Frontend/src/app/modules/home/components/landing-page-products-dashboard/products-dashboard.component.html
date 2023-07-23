@@ -1,0 +1,66 @@
+<div>
+  <mat-grid-list cols="2">
+    <mat-grid-tile
+      *ngFor="let card of cards; let i = index"
+      [colspan]="card.cols"
+      [rowspan]="card.rows"
+    >
+      <mat-card class="card">
+        <mat-card-content class="card-content">
+          <div *ngIf="i !== 0">
+            <img
+              alt="Image"
+              mat-card-image
+              [src]="card.image"
+              [style.object-fit]="'cover'"
+              [style.width]="card.width"
+              [style.height]="card.height"
+            >
+          </div>
+          <div
+            class="card-content--text"
+            *ngIf="i === 0"
+          >
+            Welcome!<br><br>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec cursus nibh. Mauris vitae ipsum ut ex
+            venenatis tempus sit amet ut justo. Pellentesque eu purus et ipsum elementum lacinia. Cras sed venenatis mi.
+            Vestibulum quis urna urna. Curabitur eget tellus vitae ex consequat dapibus eget eu eros. Suspendisse eu
+            dapibus neque. Praesent tincidunt dignissim sem a finibus. Aliquam erat volutpat. Quisque nec consectetur
+            erat, et tincidunt tellus. Ut porttitor purus diam, eget dapibus nunc dictum eget. Donec pretium efficitur
+            orci, non sollicitudin lacus dapibus sed. Mauris auctor sapien at cursus ultrices. Duis at pulvinar massa.
+            Nullam non nibh dapibus, consequat libero ac, pharetra augue. Suspendisse potenti. Suspendisse eleifend eget
+            ex vel gravida. Duis sagittis nibh nec enim viverra facilisis. Sed molestie tincidunt erat, sed scelerisque
+            odio semper in. Aenean et elit blandit, ultrices turpis eu, tempus sem. Fusce nec tempor nisi, nec pretium
+            erat. Nam vehicula congue viverra. Sed justo nulla, dapibus semper ultrices at, semper a nibh. Nunc vitae
+            erat gravida, mattis lorem sit amet, rhoncus neque. Morbi nec sapien a sapien eleifend porta tempor at eros.
+            Vestibulum laoreet in turpis at hendrerit. In hac habitasse platea dictumst.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec cursus nibh. Mauris vitae ipsum ut ex
+            venenatis tempus sit amet ut justo. Pellentesque eu purus et ipsum elementum lacinia. Cras sed venenatis mi.
+            Vestibulum quis urna urna. Curabitur eget tellus vitae ex consequat dapibus eget eu eros. Suspendisse eu
+            dapibus neque. Praesent tincidunt dignissim sem a finibus. Aliquam erat volutpat. Quisque nec consectetur
+            erat, et tincidunt tellus. Ut porttitor purus diam, eget dapibus nunc dictum eget. Donec pretium efficitur
+            orci, non sollicitudin lacus dapibus sed. Mauris auctor sapien at cursus ultrices. Duis at pulvinar massa.
+            Nullam non nibh dapibus, consequat libero ac, pharetra augue. Suspendisse potenti. Suspendisse eleifend eget
+            ex vel gravida. Duis sagittis nibh nec enim viverra facilisis. Sed molestie tincidunt erat, sed scelerisque
+            odio semper in. Aenean et elit blandit, ultrices turpis eu, tempus sem. Fusce nec tempor nisi, nec pretium
+            erat. Nam vehicula congue viverra. Sed justo nulla, dapibus semper ultrices at, semper a nibh. Nunc vitae
+            erat gravida, mattis lorem sit amet, rhoncus neque. Morbi nec sapien a sapien eleifend porta tempor at eros.
+            Vestibulum laoreet in turpis at hendrerit. In hac habitasse platea dictumst.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec cursus nibh. Mauris vitae ipsum ut ex
+            venenatis tempus sit amet ut justo. Pellentesque eu purus et ipsum elementum lacinia. Cras sed venenatis mi.
+            Vestibulum quis urna urna. Curabitur eget tellus vitae ex consequat dapibus eget eu eros. Suspendisse eu
+            dapibus neque. Praesent tincidunt dignissim sem a finibus. Aliquam erat volutpat. Quisque nec consectetur
+            erat, et tincidunt tellus. Ut porttitor purus diam, eget dapibus nunc dictum eget. Donec pretium efficitur
+            orci, non sollicitudin lacus dapibus sed. Mauris auctor sapien at cursus ultrices. Duis at pulvinar massa.
+            Nullam non nibh dapibus, consequat libero ac, pharetra augue. Suspendisse potenti. Suspendisse eleifend eget
+            ex vel gravida. Duis sagittis nibh nec enim viverra facilisis. Sed molestie tincidunt erat, sed scelerisque
+            odio semper in. Aenean et elit blandit, ultrices turpis eu, tempus sem. Fusce nec tempor nisi, nec pretium
+            erat. Nam vehicula congue viverra. Sed justo nulla, dapibus semper ultrices at, semper a nibh. Nunc vitae
+            erat gravida, mattis lorem sit amet, rhoncus neque. Morbi nec sapien a sapien eleifend porta tempor at eros.
+            Vestibulum laoreet in turpis at hendrerit. In hac habitasse platea dictumst.
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
